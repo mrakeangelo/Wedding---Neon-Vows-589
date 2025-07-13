@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Dancing+Script:wght@400;700&display=swap');
+
+body {
+  font-family: 'Orbitron', monospace;
+  overflow-x: hidden;
+}
+
+.neon-text {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.script-text {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+.glimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: glimmer 2s ease-in-out infinite;
+}
+
+.slot-machine-digit {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.5),
+    inset 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.polaroid-frame {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6);
+}
+
+.casino-card {
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.casino-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.casino-card:hover::before {
+  left: 100%;
+}
+
+.retro-button {
+  background: linear-gradient(145deg, #FF006E, #9D4EDD);
+  border: none;
+  color: white;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 110, 0.3);
+}
+
+.retro-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 110, 0.5);
+}
+
+.marquee-text {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.neon-border {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #FF006E, #0099FF, #40E0D0, #FFD700) 1;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .script-text {
+    font-size: 1.5rem;
+  }
+}
